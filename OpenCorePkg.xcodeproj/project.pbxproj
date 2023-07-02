@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -245,7 +245,23 @@
 		35366CE2240C213500D54CBB /* OcSmcLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 35366BF5240C213500D54CBB /* OcSmcLib.c */; };
 		35366CE3240C213500D54CBB /* OcSmcLibInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 35366BF7240C213500D54CBB /* OcSmcLibInternal.h */; };
 		35F6ACA6240C22EE00D6FA49 /* Canary.c in Sources */ = {isa = PBXBuildFile; fileRef = 35366B48240C213400D54CBB /* Canary.c */; };
+		73E1E94A2A522EDF0029B728 /* __OpenCorePkg__index.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 3511D59823FDB2D900CC3B17 /* __OpenCorePkg__index.o */; settings = {ATTRIBUTES = (Weak, ); }; };
+		73E1E94B2A522F830029B728 /* __OpenCorePkg__index.o in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3511D59823FDB2D900CC3B17 /* __OpenCorePkg__index.o */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73E1E94C2A522F840029B728 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73E1E94B2A522F830029B728 /* __OpenCorePkg__index.o in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		350857D42421373F005A0D86 /* GuiApp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GuiApp.c; sourceTree = "<group>"; };
@@ -672,6 +688,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E1E94A2A522EDF0029B728 /* __OpenCorePkg__index.o in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1887,6 +1904,7 @@
 				354F73F422573EBF00AB1A9B /* Headers */,
 				354F73F522573EBF00AB1A9B /* Sources */,
 				354F73F622573EBF00AB1A9B /* Frameworks */,
+				73E1E94C2A522F840029B728 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1903,7 +1921,8 @@
 		354F73EA22573DE700AB1A9B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = acidanthera;
 				TargetAttributes = {
 					354F73EE22573DE700AB1A9B = {
@@ -1920,6 +1939,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 354F73E922573DE700AB1A9B;
 			productRefGroup = 354F73E922573DE700AB1A9B;
@@ -2146,6 +2166,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2153,6 +2174,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -2202,6 +2224,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2209,6 +2232,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2229,6 +2253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUGGING_SYMBOLS = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2243,6 +2268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -2256,6 +2282,7 @@
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CLANG_MODULES_AUTOLINK = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
 				EXECUTABLE_EXTENSION = o;
@@ -2308,6 +2335,7 @@
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CLANG_MODULES_AUTOLINK = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
 				EXECUTABLE_EXTENSION = o;
@@ -2364,7 +2392,7 @@
 				354F73F022573DE700AB1A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		354F73F122573DE700AB1A9B /* Build configuration list for PBXLegacyTarget "OpenCorePkg" */ = {
 			isa = XCConfigurationList;
@@ -2373,7 +2401,7 @@
 				354F73F322573DE700AB1A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		354F73FA22573EBF00AB1A9B /* Build configuration list for PBXNativeTarget "__OpenCorePkg__index" */ = {
 			isa = XCConfigurationList;
@@ -2382,7 +2410,7 @@
 				354F73FC22573EBF00AB1A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
